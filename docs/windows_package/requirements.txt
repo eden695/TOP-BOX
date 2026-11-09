@@ -1,0 +1,2 @@
+# Dépendances requises pour TOP-BOX (Windows 10 & 11)
+Pillow>=10.2.0

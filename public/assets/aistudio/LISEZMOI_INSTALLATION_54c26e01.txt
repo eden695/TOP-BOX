@@ -1,0 +1,24 @@
+MINI SUPERMARCHE — PACKAGE DE CREATION DE L'INSTALLATEUR WINDOWS
+
+Ce package contient le code source, les fichiers de compilation et un installateur Inno Setup. L'EXE Windows et Setup doivent être compilés sur Windows.
+
+PRÉREQUIS
+- Windows 10 ou 11
+- Python 3.11 ou 3.12 installé depuis python.org, avec « Add Python to PATH »
+- Inno Setup 6 installé pour créer Setup_MINI_SUPERMARCHE.exe
+
+ÉTAPES
+1. Extraire tout le ZIP dans un dossier local.
+2. Double-cliquer sur build_exe.bat.
+3. Attendre la fin de la compilation.
+4. L'installateur sera dans output\Setup_MINI_SUPERMARCHE.exe.
+5. Distribuer ce Setup aux clients, pas le code source.
+
+DONNÉES ET MISES À JOUR
+- La base et les données sont conservées dans %LOCALAPPDATA%\MINI_SUPERMARCHE\caisse.db.
+- L'installation et la désinstallation ne suppriment pas ce dossier.
+- Pour une mise à jour, installer la nouvelle version dans le même emplacement.
+- Faire régulièrement une sauvegarde depuis l'application.
+
+IMPORTANT
+Les fichiers reçus ne contenaient pas le dossier data/assets original. Ce package inclut donc un logo et une icône génériques de remplacement. Si vous possédez les originaux, remplacez data\assets\logo_caisse.png et data\assets\app.ico avant compilation. Le code Python a été vérifié syntaxiquement, mais la compilation PyInstaller et l'installateur doivent être testés sur Windows avant distribution à des clients.

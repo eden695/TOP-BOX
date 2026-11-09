@@ -1,0 +1,82 @@
+========================================================================
+TOP-BOX — LOGICIEL DE CAISSE ENREGISTREUSE PROFESSIONNEL (WINDOWS 10 & 11)
+========================================================================
+
+Ce package complet permet de :
+1. Tester immédiatement l'application en direct sur votre PC avant toute compilation.
+2. Compiler l'exécutable autonome Windows (.EXE).
+3. Générer le programme d'installation commercial complet (Setup_TOP_BOX.exe).
+
+------------------------------------------------------------------------
+1. TEST IMMÉDIAT DU LOGICIEL (SANS COMPILER)
+------------------------------------------------------------------------
+Pour tester immédiatement TOP-BOX et vérifier son bon fonctionnement :
+1. Décompressez l'archive ZIP dans un dossier sur votre PC (ex: Bureau ou C:\TOP-BOX).
+2. Double-cliquez simplement sur le fichier :
+   👉 « lancer_test.bat »
+3. Le script vérifie Python, installe automatiquement les dépendances si nécessaire,
+   et lance directement l'application de caisse TOP-BOX avec son interface graphique.
+4. Identifiants de connexion pré-configurés pour tester :
+   - Administrateur : identifiant « admin », mot de passe « admin123 »
+   - Caissier 1     : identifiant « grace », mot de passe « 1234 »
+   - Caissier 2     : identifiant « junior », mot de passe « 1234 »
+
+------------------------------------------------------------------------
+2. COMPILATION DE L'EXÉCUTABLE (.EXE) ET DU SETUP INSTALLATEUR
+------------------------------------------------------------------------
+Une fois vos tests validés, pour créer l'exécutable final et l'installateur client :
+1. Double-cliquez sur le fichier :
+   👉 « build_exe.bat »
+2. Le script effectue automatiquement toutes les étapes :
+   - Mise à jour de pip
+   - Installation de Pillow et PyInstaller
+   - Compilation du code Python en exécutable autonome sans console noire (.exe)
+   - Intégration de l'icône HD et des images d'actifs
+   - Détection de Inno Setup 6 pour produire « output\Setup_TOP_BOX.exe ».
+3. Fichiers générés :
+   - « dist\TOP-BOX.exe » : Exécutable autonome portable
+   - « output\Setup_TOP_BOX.exe » : Installateur commercial officiel
+
+------------------------------------------------------------------------
+3. PRÉREQUIS TECHNIQUES
+------------------------------------------------------------------------
+- Système : Windows 10 ou Windows 11 (64 bits recommandé).
+- Python 3.11 ou 3.12 (téléchargé depuis https://www.python.org/downloads/).
+  IMPORTANT : cochez impérativement la case « Add python.exe to PATH » lors
+  de l'installation de Python.
+- Inno Setup 6 (logiciel gratuit sur https://jrsoftware.org/isdl.php)
+  uniquement si vous souhaitez générer le fichier Setup_TOP_BOX.exe d'installation.
+
+------------------------------------------------------------------------
+4. DISTRIBUTION COMMERCIALE AUX COMMERÇANTS
+------------------------------------------------------------------------
+- Ne donnez PAS le code source à vos clients : distribuez uniquement le fichier
+  « Setup_TOP_BOX.exe » (ou « TOP-BOX.exe »).
+- L'installateur installe le logiciel proprement dans Program Files, crée le raccourci
+  sur le bureau avec la superbe icône TOP-BOX, et ajoute un désinstallateur propre.
+
+------------------------------------------------------------------------
+5. SÉCURITÉ ET PERSISTANCE DES DONNÉES SQLite
+------------------------------------------------------------------------
+- La base de données de production SQLite est stockée dans :
+  %LOCALAPPDATA%\TOP_BOX\caisse.db
+- MIGRATION AUTOMATIQUE : Si l'utilisateur possédait une ancienne version
+  (MINI SUPERMARCHE), TOP-BOX détecte et importe automatiquement la base existante
+  sans aucune perte de ventes, de stocks, de prix ou d'historique !
+- Les sauvegardes manuelles et automatiques sont archivées dans :
+  %LOCALAPPDATA%\TOP_BOX\backups\
+- La désinstallation ou la mise à jour n'efface JAMAIS les données des commerçants.
+
+------------------------------------------------------------------------
+6. FONCTIONNALITÉS CLÉS INCLUSES
+------------------------------------------------------------------------
+- Caisse enregistreuse rapide avec codes-barres et raccourcis clavier
+- Espèces (FCFA) et Mobile Money Congo-Brazzaville (MTN MoMo *105# & Airtel Money *128#)
+- Gestion des sessions et des comptes caissiers avec compte Administrateur
+- Clôture journalière (Z de caisse) et historique d'audit
+- Impression tickets de caisse thermiques 80mm ESC/POS et factures A4
+- Fonctionnement 100% hors-ligne (aucune connexion Internet requise).
+
+========================================================================
+Édité par TOP-BOX Systems — Tous droits réservés.
+========================================================================

@@ -1,0 +1,6 @@
+{
+  "name": "TOP-BOX - Logiciel de Caisse Professionnel",
+  "description": "Logiciel de caisse professionnel haut de gamme pour commerçants : gestion des ventes, stocks, tickets thermiques 80mm & A4, statistiques avancées, clôture de caisse et package Windows hors ligne.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
